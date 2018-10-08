@@ -21,5 +21,13 @@ it("Should return sum of multiple numbers", () => {
 });
 
 it("Should return sum of multiple numbers split with newline", () => {
-	expect(add("2 \n1,8")).toBe(11);
+	expect(add("2 \n1, 8")).toBe(11);
+});
+
+it("Should return sum of multiple numbers split with newline", () => {
+	expect(add("2 \n1, 8")).toBe(11);
+});
+
+it("Should throw error on negative numbers", () => {
+    expect(() => add("-3, 4")).toThrow('Negatives not allowed: -3');
 });

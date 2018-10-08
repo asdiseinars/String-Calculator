@@ -4,6 +4,16 @@ function add (numbers) {
   }
 
   var numberArray = splitNumbers(numbers);
+
+  var negativeArray = [];
+  for(var i = 0; i < numberArray.length; i++) {
+    if(parseInt(numberArray[i]) < 0) {
+      negativeArray.push(numberArray[i]);
+    }
+  }
+  if(negativeArray.length > 0) {
+    throw new Error("Negatives not allowed: " + negativeArray.join(','));
+  }
   return sum(numberArray);
 }
 

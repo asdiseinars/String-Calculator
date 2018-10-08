@@ -15,3 +15,7 @@ it("Should return sum of two given numbers in string", () => {
 it("Should return sum of all numbers in string", () => {
     expect(add("2, 4, 5")).toBe(11);
 });
+
+it("Should return sum of all numbers in string", () => {
+    expect(add("2, 4, 5, 3")).toBe(14);
+});

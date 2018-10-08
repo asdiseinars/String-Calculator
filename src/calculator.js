@@ -8,6 +8,7 @@ function add (numbers) {
   return sum(numberArray);
 }
 
+//Opperator that sums an array of numbers
 function sum (numberArray) {
     var sum = 0;
     for(var i = 0; i < numberArray.length; i++){
@@ -16,10 +17,12 @@ function sum (numberArray) {
     return sum;
 }
 
+//Splits given string by numbers
 function splitNumbers (numbers) {
   return numbers.replace(/\n/g, ",").split(",");
 }
 
+//Throws an error if a negative number is in the string
 function negativeNumbers (numberArray) {
   var negativeArray = [];
   for(var i = 0; i < numberArray.length; i++) {
@@ -32,6 +35,7 @@ function negativeNumbers (numberArray) {
   }
 }
 
+//Filters out any number larger than 1000
 function filterLargeNumbers (numberArray) {
   var filteredArray = [];
   for(var i = 0; i < numberArray.length; i++) {

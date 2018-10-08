@@ -12,10 +12,14 @@ it("Should return sum of two given numbers in string", () => {
     expect(add("3, 6")).toBe(9);
 });
 
-it("Should return sum of all numbers in string", () => {
+it("Should return sum of multiple number", () => {
     expect(add("2, 4, 5")).toBe(11);
 });
 
-it("Should return sum of all numbers in string", () => {
+it("Should return sum of multiple numbers", () => {
     expect(add("2, 4, 5, 3")).toBe(14);
+});
+
+it("Should return sum of multiple numbers split with newline", () => {
+	expect(add("2 \n1,8")).toBe(11);
 });

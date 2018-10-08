@@ -29,5 +29,5 @@ it("Should return sum of multiple numbers split with newline", () => {
 });
 
 it("Should throw error on negative numbers", () => {
-    expect(() => add("-3, 4")).toThrow('Negatives not allowed: -3');
+    expect(() => add("-3, -4")).toThrow('Negatives not allowed: -3');
 });

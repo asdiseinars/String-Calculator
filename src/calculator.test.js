@@ -31,3 +31,7 @@ it("Should return sum of multiple numbers split with newline", () => {
 it("Should throw error on negative numbers", () => {
     expect(() => add("-3, -4")).toThrow('Negatives not allowed: -3');
 });
+
+it("Should ignore numbers bigger than 1000", () => {
+    expect(add("1001, 2")).toBe(2);
+});

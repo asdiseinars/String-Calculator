@@ -1,14 +1,15 @@
 function add (numbers) {
   var numberArray = splitNumbers(numbers);
 
+  //Allow the Add method to handle a different delimiter
   if(numberArray[0].includes("//")) {
     var tmpString = numbers.slice(2);
     var	delimeter = numbers[2];
     var numberArray = tmpString.replace(/\n/g, delimeter).split(delimeter);
   }
 
+  //Filtering out numbers larger then 1000 and negative numbers
   numberArray = filterLargeNumbers(numberArray);
-
   negativeNumbers(numberArray);
 
   return sum(numberArray);
@@ -23,7 +24,7 @@ function sum (numberArray) {
     return sum;
 }
 
-//Splits given string by numbers
+//Split the array by delimiters "," and "\n"
 function splitNumbers (numbers) {
   return numbers.replace(/\n/g, ",").split(",");
 }

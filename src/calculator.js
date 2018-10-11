@@ -1,10 +1,16 @@
 function add (numbers) {
-  if(numbers == "") {
-    return 0;
-  }
   var numberArray = splitNumbers(numbers);
+
+  if(numberArray[0].includes("//")) {
+    var tmpString = numbers.slice(2);
+    var	delimeter = numbers[2];
+    var numberArray = tmpString.replace(/\n/g, delimeter).split(delimeter);
+  }
+
   numberArray = filterLargeNumbers(numberArray);
+
   negativeNumbers(numberArray);
+
   return sum(numberArray);
 }
 
